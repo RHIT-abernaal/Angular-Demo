@@ -2,3 +2,6 @@
 <h1 *ngIf="month != 9 || day != 31">Try again another day.</h1>
 <p>Today is {{monthNames[month]}} {{day}}</p>
 <button (click)="changeMonth(-1)">Month--</button>
+<button (click)="changeMonth(1)">Month++</button>
+<button (click)="changeDay(-1)">Day--</button>
+<button (click)="changeDay(1)">Day++</button>
