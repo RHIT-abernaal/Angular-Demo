@@ -1,2 +1,4 @@
-<h1>{{title}}</h1>
+<h1 *ngIf="month == 9 && day == 31">It is Halloween!</h1>
+<h1 *ngIf="month != 9 || day != 31">Try again another day.</h1>
 <p>Today is {{monthNames[month]}} {{day}}</p>
+<button (click)="changeMonth(-1)">Month--</button>

@@ -11,4 +11,7 @@ export class AppComponent {
   monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   month = this.today.getMonth();
   day = this.today.getDay();
+  changeMonth(change: number) : void {
+    this.month += change;
+  }
 }
