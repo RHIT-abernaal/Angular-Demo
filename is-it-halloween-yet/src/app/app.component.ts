@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PictureDisplayerComponent } from './picture-displayer/picture-displayer.component';
 
 @Component({
   selector: 'app-root',
