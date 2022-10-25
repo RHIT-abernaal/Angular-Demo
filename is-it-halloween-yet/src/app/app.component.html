@@ -1,9 +1,14 @@
-<p>Today is {{monthNames[month]}} {{day}}</p>
-<button (click)="changeMonth(-1)">Month--</button>
-<button (click)="changeMonth(1)">Month++</button>
-<button (click)="changeDay(-1)">Day--</button>
-<button (click)="changeDay(1)">Day++</button>
+<!-- app.component.html is the template (the view) part of AppComponent -->
+<div class="textbox">
+  <p>Today is {{month[display_month].name}} {{display_day}}</p>
+  <div class="button-group">
+    <button (click)="changeMonth(-1)">Month--</button>
+    <button (click)="changeMonth(1)">Month++</button>
+    <button (click)="changeDay(-1)">Day--</button>
+    <button (click)="changeDay(1)">Day++</button>
+  </div>
+</div>
 <div>
-<app-picture-displayer *ngFor="let holiday of holidays"
-  [month]="month" [day]="day" [goalMonth]="holiday.month - 1" [goalDay] = "holiday.day" [url]="holiday.image"></app-picture-displayer>
+  <app-picture-displayer *ngFor="let holiday of holidays" [month]="display_month" [day]="display_day"
+    [goalMonth]="holiday.month - 1" [goalDay]="holiday.day" [url]="holiday.image"></app-picture-displayer>
 </div>
