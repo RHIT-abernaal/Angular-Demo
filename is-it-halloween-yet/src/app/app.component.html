@@ -3,4 +3,7 @@
 <button (click)="changeMonth(1)">Month++</button>
 <button (click)="changeDay(-1)">Day--</button>
 <button (click)="changeDay(1)">Day++</button>
-<app-picture-displayer [month]="month" [day]="day" [goalMonth]="9" [goalDay] = "31" [url]="halloweenImage"></app-picture-displayer>
+<div>
+<app-picture-displayer *ngFor="let holiday of holidays"
+  [month]="month" [day]="day" [goalMonth]="holiday.month - 1" [goalDay] = "holiday.day" [url]="holiday.image"></app-picture-displayer>
+</div>
